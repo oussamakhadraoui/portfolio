@@ -18,7 +18,7 @@ const NavBar = () => {
       <nav className='flex items-center justify-center flex-wrap'>
         <motion.a
           target={'_blank'}
-          href=''
+          href='https://github.com/oussamakhadraoui'
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
         >
@@ -26,11 +26,11 @@ const NavBar = () => {
         </motion.a>
         <motion.a
           target={'_blank'}
-          href=''
+          href='https://www.linkedin.com/in/oussama-khadraoui'
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
         >
-          <Linkedin className='w-6 mr-3' />
+          <Linkedin className='w-6 ml-3' />
         </motion.a>
       </nav>
       <div className='absolute left-[50%] top-2 translate-x-[-50%]'>
