@@ -1,7 +1,10 @@
+
 import NavBar from '@/components/NavBar'
 import './globals.css'
-import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Footer from '@/components/Footer'
+import AnimatePresencePro from '@/components/providers/AnimatePresencec'
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,11 +18,14 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
   return (
-    <html lang="en">
-      <body className={inter.className+"container"}>
-        <NavBar/>
-        {children}</body>
+    <html lang='en'>
+      <body className={inter.className}>
+        <NavBar />
+        <AnimatePresencePro>{children}</AnimatePresencePro>
+        <Footer />
+      </body>
     </html>
   )
 }
