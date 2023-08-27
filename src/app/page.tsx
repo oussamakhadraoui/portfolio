@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button'
 import { LinkArrow } from '@/components/Icons'
 import Transition from '@/components/Transition'
 export const metadata: Metadata = {
-  title: 'OK-Portfolio',
+  title: 'OK | Portfolio',
   description: 'Glad to show you my work',
 }
 export default function Home() {
