@@ -11,10 +11,11 @@ export const metadata: Metadata = {
   description: 'Glad to show you my work',
 }
 export default function Home() {
+
   return (
     <>
       <Transition />
-      <main className='container flex items-center text-dark w-full min-h-screen pt-0'>
+      <main className='flex items-center text-dark w-full min-h-screen pt-0 dark:bg-black'>
         <div className='flex items-center justify-between w-full'>
           <div className='w-1/2'>
             {/* <Image src={image} className='w-full h-auto' alt='oussama' /> */}

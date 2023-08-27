@@ -3,9 +3,11 @@ import { motion } from 'framer-motion'
 import React from 'react'
 import Logo from './Logo'
 import NavLinks from './NavLinks'
-import { GithubIcon, Linkedin } from './Icons'
+import { DarkIcon, GithubIcon, Linkedin, SunIcon } from './Icons'
+import useThemeSwitcher from '@/hooks/useThemeSwitcher'
 
 const NavBar = () => {
+    const [mode, setMode] = useThemeSwitcher()
   return (
     <header className='w-full px-32 py-8 font-medium flex items-center justify-between'>
       <nav>
@@ -32,6 +34,13 @@ const NavBar = () => {
         >
           <Linkedin className='w-6 ml-3' />
         </motion.a>
+        <button
+          onClick={() => setMode(mode === 'dark' ? 'light' : 'dark')}
+          className='ml-6 flex items-center justify-center rounded-full p-1'
+          // 'w-6 ml-6'
+        >
+          {mode === 'dark' ? <SunIcon /> : <DarkIcon />}
+        </button>
       </nav>
       <div className='absolute left-[50%] top-2 translate-x-[-50%]'>
         <Logo />
