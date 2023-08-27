@@ -13,7 +13,6 @@ interface NavLinksProps {
 const NavLinks = ({ href, className, title }: NavLinksProps) => {
   const pathName = usePathname()
   const width = pathName === href ? 'w-full' : 'w-0'
-  console.log(width)
   return (
     <Link href={href} className={`${className} relative group`}>
       {title}
