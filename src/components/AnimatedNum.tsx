@@ -3,14 +3,14 @@ import { useInView, useMotionValue, useSpring } from 'framer-motion'
 import React, { useRef, useEffect } from 'react'
 
 interface AnimatedNumProps {
-  value:number
+  value: number
 }
 
 const AnimatedNum = ({ value }: AnimatedNumProps) => {
   const ref = useRef<HTMLSpanElement>(null)
   const motionValue = useMotionValue(0)
   const SpringValue = useSpring(motionValue, { duration: 3000 })
-  const isInView = useInView(ref)
+  const isInView = useInView(ref, { once: true })
   useEffect(() => {
     if (isInView) {
       motionValue.set(value)

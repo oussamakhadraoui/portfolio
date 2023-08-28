@@ -5,6 +5,7 @@ import AnimatedText from '@/components/AnimatedText'
 import Image from 'next/image'
 import oussama from '../../../public/ok.png'
 import AnimatedNum from '@/components/AnimatedNum'
+import Skills from '@/components/Skills'
 interface pageProps {}
 export const metadata: Metadata = {
   title: 'OK | About',
@@ -72,6 +73,7 @@ const page = ({}: pageProps) => {
               </div>
             </div>
           </div>
+          <Skills/>
         </div>
       </main>
     </>
