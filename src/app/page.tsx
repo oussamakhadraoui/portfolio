@@ -6,15 +6,16 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { LinkArrow } from '@/components/Icons'
 import Transition from '@/components/Transition'
+import { Fragment } from 'react'
 export const metadata: Metadata = {
   title: 'OK | Portfolio',
   description: 'Glad to show you my work',
 }
-export default function Home() {
+ function Home() {
 
   return (
-    <>
-      <Transition />
+    <Fragment key={"home"}>
+
       <main className='flex items-center text-dark w-full min-h-screen pt-0 dark:bg-black'>
         <div className='flex items-center justify-between w-full'>
           <div className='w-1/2'>
@@ -52,6 +53,7 @@ export default function Home() {
           </div>
         </div>
       </main>
-    </>
+    </Fragment>
   )
 }
+export default Home

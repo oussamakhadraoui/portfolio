@@ -1,11 +1,12 @@
 import Transition from '@/components/Transition'
-import React from 'react'
+import React, { Fragment } from 'react'
 import type { Metadata } from 'next'
 import AnimatedText from '@/components/AnimatedText'
 import Image from 'next/image'
 import oussama from '../../../public/ok.png'
 import AnimatedNum from '@/components/AnimatedNum'
 import Skills from '@/components/Skills'
+import Experience from '@/components/experience'
 interface pageProps {}
 export const metadata: Metadata = {
   title: 'OK | About',
@@ -13,8 +14,8 @@ export const metadata: Metadata = {
 }
 const page = ({}: pageProps) => {
   return (
-    <>
-      <Transition />
+    <Fragment key={"about"}>
+      {/* <Transition /> */}
       <main className='flex w-full flex-col items-center justify-center'>
         <div className='pt-16'>
           <AnimatedText text='Code Is Magic' className='mb-16' />
@@ -74,9 +75,10 @@ const page = ({}: pageProps) => {
             </div>
           </div>
           <Skills/>
+          <Experience/>
         </div>
       </main>
-    </>
+    </Fragment>
   )
 }
 

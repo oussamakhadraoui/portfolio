@@ -1,10 +1,11 @@
-
+'use client'
 import NavBar from '@/components/NavBar'
 import './globals.css'
 import { Inter } from 'next/font/google'
 import Footer from '@/components/Footer'
-import AnimatePresencePro from '@/components/providers/AnimatePresencec'
-
+import { AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
+import { usePathname } from 'next/navigation'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,14 +19,14 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-
+  const pathname = usePathname()
   return (
     <html lang='en'>
-      <body className={inter.className}>
-        <NavBar  />
-        <AnimatePresencePro>
-          {children}
-          </AnimatePresencePro>
+      <body suppressHydrationWarning={true} className={inter.className}>
+        <NavBar />
+        <AnimatePresence mode='wait'>
+          <motion.div key={pathname}>{children}</motion.div>
+        </AnimatePresence>
         <Footer />
       </body>
     </html>

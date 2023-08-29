@@ -2,6 +2,13 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Tooltip as ReactTooltip } from 'react-tooltip'
+import express from '../../public/express.png'
+import nest from '../../public/nest.png'
+import react from '../../public/react.png'
+import next from '../../public/nextjs.png'
+import typescript from '../../public/ts.png'
+import node from '../../public/nodeJsSmall.png'
+import Image from 'next/image'
 
 // import { urlFor, client } from '../../client'
 // import './Skills.scss'
@@ -10,25 +17,14 @@ const Skills = () => {
   // const [experiences, setExperiences] = useState([])
   // const [skills, setSkills] = useState([])
   const skills = [
-    { name: 'dfgdf', bgColor: 'dfgdfg', icon: 'dfgdfg' }, 
-    { name: 'dfgdf', bgColor: 'dfgdfg', icon: 'dfgdfg' }, 
-    { name: 'dfgdf', bgColor: 'dfgdfg', icon: 'dfgdfg' }, 
-    { name: 'dfgdf', bgColor: 'dfgdfg', icon: 'dfgdfg' }, 
-    { name: 'dfgdf', bgColor: 'dfgdfg', icon: 'dfgdfg' }, 
-    { name: 'dfgdf', bgColor: 'dfgdfg', icon: 'dfgdfg' }, 
-    { name: 'dfgdf', bgColor: 'dfgdfg', icon: 'dfgdfg' }, 
-    { name: 'dfgdf', bgColor: 'dfgdfg', icon: 'dfgdfg' }, 
-    { name: 'dfgdf', bgColor: 'dfgdfg', icon: 'dfgdfg' }, 
-    { name: 'dfgdf', bgColor: 'dfgdfg', icon: 'dfgdfg' }, 
-    { name: 'dfgdf', bgColor: 'dfgdfg', icon: 'dfgdfg' }, 
-    { name: 'dfgdf', bgColor: 'dfgdfg', icon: 'dfgdfg' }, 
+    { name: 'ReactJs', bgColor: 'bg-cyan-50', icon: react },
+    { name: 'NextJs', bgColor: 'bg-gray-200', icon: next },
+    { name: 'NestJs', bgColor: 'bg-red-50', icon: nest },
+    { name: 'NodeJs', bgColor: 'bg-green-50', icon: node },
+    { name: 'ExpressJs', bgColor: 'bg-gray-100', icon: express },
+    { name: 'Typescript', bgColor: 'bg-cyan-50', icon: typescript },
   ]
-  const experiences = [
-    { year: 'dfgdf', works: [{ name: 'dfgdfg', company: 'dfgdfg', desc: 'dfgdfg' }] },
-    { year: 'ffdg', works: [{ name: 'dfgdfg', company: 'dfgdfg', desc: 'dfgdfg' }] },
-    { year: 'dfg', works: [{ name: 'dfgdfg', company: 'dfgdfg', desc: 'dfgdfg' }] },
-    { year: 'dfgf', works: [{ name: 'dfgdfg', company: 'dfgdfg', desc: 'dfgdfg' }] },
-  ]
+
 
   return (
     <>
@@ -37,9 +33,9 @@ const Skills = () => {
         Skills & Experiences
       </h2>
 
-      <div className='w-[80%] mt-12 flex flex-row md:w-full md:flex-col'>
+      <div className='w-full mt-12 flex flex-row md:w-full sm:flex-col'>
         <motion.div
-          className='flex flex-1 flex-wrap justify-start items-start mr-20 md:mr-0 md:justify-center
+          className='flex flex-wrap justify-center items-center md:justify-center
         md:items-center'
         >
           {skills.map((skill) => (
@@ -50,10 +46,10 @@ const Skills = () => {
               key={skill.name}
             >
               <div
-                className='flex justify-center items-center w-24 h-24 hover:shadow-xx bg-red-100 rounded-full '
-                style={{ backgroundColor: skill.bgColor }}
+                className={`flex justify-center items-center w-24 h-24 hover:shadow-xx bg-red-100 rounded-full ${skill.bgColor}`}
+                // style={{ backgroundColor: skill.bgColor }}
               >
-                <img
+                <Image
                   className='w-6/12 h-[50%]'
                   src={skill.icon}
                   alt={skill.name}
@@ -65,7 +61,15 @@ const Skills = () => {
             </motion.div>
           ))}
         </motion.div>
-        <div className='flex flex-1 justify-start items-start flex-col md:mt-8'>
+      </div>
+    </>
+  )
+}
+
+export default Skills
+
+   {
+     /* <div className='flex flex-1 justify-start items-start flex-col md:mt-8'>
           {experiences.map((experience) => (
             <motion.div
               className='w-full flex flex-row justify-start items-start my-4 mx-0 '
@@ -107,15 +111,5 @@ const Skills = () => {
               </motion.div>
             </motion.div>
           ))}
-        </div>
-      </div>
-    </>
-  )
-}
-
-export default Skills
-// AppWrap(
-//   MotionWrap(Skills, 'app__skills'),
-//   'skills',
-//   'app__whitebg'
-// )
+        </div> */
+   }
