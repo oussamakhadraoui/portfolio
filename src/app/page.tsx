@@ -6,6 +6,7 @@ import { LinkArrow } from '@/components/Icons'
 
 import About from '@/components/pages/About'
 import Galaxy from '@/components/Galaxy'
+import Education from '@/components/Education'
 export const metadata: Metadata = {
   title: 'OK | Portfolio',
   description: 'Glad to show you my work',
@@ -52,6 +53,7 @@ function Home() {
         </div>
       </main>
       <About/>
+      <Education/>
     </>
   )
 }
