@@ -1,7 +1,6 @@
 'use client'
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { motion } from 'framer-motion'
-import { Tooltip as ReactTooltip } from 'react-tooltip'
 import express from '../../public/express.png'
 import nest from '../../public/nest.png'
 import react from '../../public/react.png'
@@ -10,12 +9,10 @@ import typescript from '../../public/ts.png'
 import node from '../../public/nodeJsSmall.png'
 import Image from 'next/image'
 
-// import { urlFor, client } from '../../client'
-// import './Skills.scss'
+
 
 const Skills = () => {
-  // const [experiences, setExperiences] = useState([])
-  // const [skills, setSkills] = useState([])
+
   const skills = [
     { name: 'ReactJs', bgColor: 'bg-cyan-50', icon: react },
     { name: 'NextJs', bgColor: 'bg-gray-200', icon: next },
@@ -68,48 +65,48 @@ const Skills = () => {
 
 export default Skills
 
-   {
-     /* <div className='flex flex-1 justify-start items-start flex-col md:mt-8'>
-          {experiences.map((experience) => (
-            <motion.div
-              className='w-full flex flex-row justify-start items-start my-4 mx-0 '
-              key={experience.year}
-            >
-              <div className='mr-12 sm:mr-4'>
-                <p className='text-cyan-950 text-base font-extrabold text-left xl:text-3xl sm:text-sm'>
-                  {experience.year}
-                </p>
-              </div>
-              <motion.div className='flex flex-1'>
-                {experience.works.map((work) => (
-                  <>
-                    <motion.div
-                      whileInView={{ opacity: [0, 1] }}
-                      transition={{ duration: 0.5 }}
-                      className='flex flex-col justify-start items-start mb-4 cursor-pointer'
-                      data-tip
-                      data-for={work.name}
-                      key={work.name}
-                    >
-                      <h4 className='font-medium text-base text-left xl:text-3xl sm:text-sm'>
-                        {work.name}
-                      </h4>
-                      <p className='font-normal mt-1 text-cyan-950 p-text'>
-                        {work.company}
-                      </p>
-                    </motion.div>
-                    <ReactTooltip
-                      id={work.name}
-                      // effect='solid'
-                      arrowColor='#fff'
-                      className='rounded p-4 text-center leading-normal opacity-100 text-gray-700 shadow-xx bg-white max-w-[300px] xl:!text-2xl xl:!max-w-[500px] '
-                    >
-                      {work.desc}
-                    </ReactTooltip>
-                  </>
-                ))}
-              </motion.div>
-            </motion.div>
-          ))}
-        </div> */
-   }
+  //  {
+  //    /* <div className='flex flex-1 justify-start items-start flex-col md:mt-8'>
+  //         {experiences.map((experience) => (
+  //           <motion.div
+  //             className='w-full flex flex-row justify-start items-start my-4 mx-0 '
+  //             key={experience.year}
+  //           >
+  //             <div className='mr-12 sm:mr-4'>
+  //               <p className='text-cyan-950 text-base font-extrabold text-left xl:text-3xl sm:text-sm'>
+  //                 {experience.year}
+  //               </p>
+  //             </div>
+  //             <motion.div className='flex flex-1'>
+  //               {experience.works.map((work) => (
+  //                 <>
+  //                   <motion.div
+  //                     whileInView={{ opacity: [0, 1] }}
+  //                     transition={{ duration: 0.5 }}
+  //                     className='flex flex-col justify-start items-start mb-4 cursor-pointer'
+  //                     data-tip
+  //                     data-for={work.name}
+  //                     key={work.name}
+  //                   >
+  //                     <h4 className='font-medium text-base text-left xl:text-3xl sm:text-sm'>
+  //                       {work.name}
+  //                     </h4>
+  //                     <p className='font-normal mt-1 text-cyan-950 p-text'>
+  //                       {work.company}
+  //                     </p>
+  //                   </motion.div>
+  //                   <ReactTooltip
+  //                     id={work.name}
+  //                     // effect='solid'
+  //                     arrowColor='#fff'
+  //                     className='rounded p-4 text-center leading-normal opacity-100 text-gray-700 shadow-xx bg-white max-w-[300px] xl:!text-2xl xl:!max-w-[500px] '
+  //                   >
+  //                     {work.desc}
+  //                   </ReactTooltip>
+  //                 </>
+  //               ))}
+  //             </motion.div>
+  //           </motion.div>
+  //         ))}
+  //       </div> */
+  //  }

@@ -1,21 +1,19 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
-import image from '../../public/eliot.jpg'
 import AnimatedText from '@/components/AnimatedText'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { LinkArrow } from '@/components/Icons'
-import Transition from '@/components/Transition'
-import { Fragment } from 'react'
+
+import About from '@/components/pages/About'
+import Galaxy from '@/components/Galaxy'
 export const metadata: Metadata = {
   title: 'OK | Portfolio',
   description: 'Glad to show you my work',
 }
- function Home() {
-
+function Home() {
   return (
-    <Fragment key={"home"}>
-
+    <>
+    <Galaxy/>
       <main className='flex items-center text-dark w-full min-h-screen pt-0 dark:bg-black'>
         <div className='flex items-center justify-between w-full'>
           <div className='w-1/2'>
@@ -53,7 +51,8 @@ export const metadata: Metadata = {
           </div>
         </div>
       </main>
-    </Fragment>
+      <About/>
+    </>
   )
 }
 export default Home
