@@ -12,6 +12,7 @@ const AnimateOption_h1: Variants = {
 const AnimateOption_span: Variants = {
   initial: { opacity: 0, y: 50 },
   animate: { opacity: 1, y: 0, transition: { duration: 1 } },
+
 }
 const AnimatedText = ({ className, text }: AnimatedTextProps) => {
   return (
@@ -21,6 +22,7 @@ const AnimatedText = ({ className, text }: AnimatedTextProps) => {
         variants={AnimateOption_h1}
         initial='initial'
         animate='animate'
+        whileInView={{ opacity: [0, 1] }}
       >
         {text.split(' ').map((word, index) => {
           return (
@@ -28,7 +30,6 @@ const AnimatedText = ({ className, text }: AnimatedTextProps) => {
               className='inline-block'
               key={index + '#' + word}
               variants={AnimateOption_span}
-
             >
               {word}&nbsp;
             </motion.span>

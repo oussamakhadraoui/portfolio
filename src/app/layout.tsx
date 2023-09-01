@@ -1,9 +1,8 @@
-
 import NavBar from '@/components/NavBar'
 import './globals.css'
 import { Inter } from 'next/font/google'
 import Footer from '@/components/Footer'
-
+import ActiveSectionContextProvider from '@/lib/active-section-context'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,10 +18,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body suppressHydrationWarning={true} className={inter.className}>
+      <body
+        suppressHydrationWarning={true}
+        className={inter.className + 'w-full min-h-screen'}
+      >
+        <ActiveSectionContextProvider>
           <NavBar />
           {children}
           <Footer />
+        </ActiveSectionContextProvider>
       </body>
     </html>
   )
