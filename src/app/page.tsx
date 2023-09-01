@@ -17,7 +17,7 @@ function Home() {
   return (
     <>
       <Galaxy />
-      <main className='flex items-center text-black w-full min-h-screen xxxxxxx pt-0 dark:bg-black'>
+      <main className='flex items-center text-black w-full min-h-screen pt-0 dark:bg-black'>
         <LayOut className='pt-0'>
           <div className='flex items-center justify-between w-full'>
             <div className='w-1/2'>
@@ -54,11 +54,14 @@ function Home() {
               </div>
             </div>
           </div>
+          <About />
+          <Education />
+          <div className='flex flex-col items-center px-4'>
+          <Projects />
+
+          </div>
         </LayOut>
       </main>
-      <About />
-      <Education />
-      <Projects/>
     </>
   )
 }
