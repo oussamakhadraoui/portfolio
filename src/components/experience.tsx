@@ -1,159 +1,61 @@
 'use client'
+
 import React from 'react'
+
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from 'react-vertical-timeline-component'
-import { motion } from 'framer-motion'
-import SectionWrapper from '../hooks/SectionWrapper'
 import 'react-vertical-timeline-component/style.min.css'
+import { experiencesData } from '@/lib/data'
 
-import meta from '../../public/meta.png'
-import { staggerContainer, textVariant } from '../utils/motion'
-import { styles } from '@/utils/styes'
-import Image from 'next/image'
-interface experience {
-  title: string
-  company_name: string
-  date: string
-  iconBg: string
-  points: string[]
-  icon: any
-}
-const experiences: experience[] = [
-  {
-    title: 'React.js Developer',
-    company_name: 'Starbucks',
-    icon: meta,
-    iconBg: '#383E56',
-    date: 'March 2020 - April 2021',
-    points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
-    ],
-  },
-  {
-    title: 'React Native Developer',
-    company_name: 'Tesla',
-    icon: meta,
-    iconBg: '#E6DEDD',
-    date: 'Jan 2021 - Feb 2022',
-    points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
-    ],
-  },
-  {
-    title: 'Web Developer',
-    company_name: 'Shopify',
-    icon: meta,
-    iconBg: '#383E56',
-    date: 'Jan 2022 - Jan 2023',
-    points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
-    ],
-  },
-  {
-    title: 'Full stack Developer',
-    company_name: 'Meta',
-    icon: meta,
-    iconBg: '#E6DEDD',
-    date: 'Jan 2023 - Present',
-    points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
-    ],
-  },
-]
 
-const ExperienceCard = ({ experience }: { experience: experience }) => {
+import { useSectionInView } from '@/hooks/useSectionInView'
+import SectionHeading from './Heading-section'
+import { useTheme } from '@/hooks/useThemeSwitcher'
+
+export default function Experience() {
+  const { ref } = useSectionInView('Experience')
+  const { theme } = useTheme()
+
   return (
-    <VerticalTimelineElement
-      contentStyle={{
-        background: '#1d1836',
-        color: '#fff',
-      }}
-      contentArrowStyle={{ borderRight: '7px solid  #232631' }}
-      date={experience.date}
-      iconStyle={{ background: experience.iconBg }}
-      icon={
-        <div className='flex justify-center items-center w-full h-full'>
-          <Image
-            src={experience.icon}
-            alt={experience.company_name}
-            className='w-[60%] h-[60%] object-contain'
-          />
-        </div>
-      }
-    >
-      <div>
-        <h3 className='text-white text-[24px] font-bold'>{experience.title}</h3>
-        <p
-          className='text-secondary text-[16px] font-semibold'
-          style={{ margin: 0 }}
-        >
-          {experience.company_name}
-        </p>
-      </div>
-
-      <ul className='mt-5 list-disc ml-5 space-y-2'>
-        {experience.points.map((point: string, index: number) => (
-          <li
-            key={`experience-point-${index}`}
-            className='text-white-100 text-[14px] pl-1 tracking-wider'
-          >
-            {point}
-          </li>
+    <section id='experience' ref={ref} className='scroll-mt-28 mb-28 sm:mb-40'>
+      <SectionHeading>My experience</SectionHeading>
+      <VerticalTimeline lineColor=''>
+        {experiencesData.map((item, index) => (
+          <React.Fragment key={index}>
+            <VerticalTimelineElement
+              contentStyle={{
+                background:
+                  theme === 'light' ? '#f3f4f6' : 'rgba(255, 255, 255, 0.05)',
+                boxShadow: 'none',
+                border: '1px solid rgba(0, 0, 0, 0.05)',
+                textAlign: 'left',
+                padding: '1.3rem 2rem',
+              }}
+              contentArrowStyle={{
+                borderRight:
+                  theme === 'light'
+                    ? '0.4rem solid #9ca3af'
+                    : '0.4rem solid rgba(255, 255, 255, 0.5)',
+              }}
+              date={item.date}
+              icon={item.icon}
+              iconStyle={{
+                background:
+                  theme === 'light' ? 'white' : 'rgba(255, 255, 255, 0.15)',
+                fontSize: '1.5rem',
+              }}
+            >
+              <h3 className='font-semibold capitalize'>{item.title}</h3>
+              <p className='font-normal !mt-0'>{item.location}</p>
+              <p className='!mt-1 !font-normal text-gray-700 dark:text-white/75'>
+                {item.description}
+              </p>
+            </VerticalTimelineElement>
+          </React.Fragment>
         ))}
-      </ul>
-    </VerticalTimelineElement>
+      </VerticalTimeline>
+    </section>
   )
 }
-
-const Experience = () => {
-  return (
-    <>
-      <motion.section
-        variants={staggerContainer()}
-        initial='hidden'
-        whileInView='show'
-        viewport={{ once: true, amount: 0.25 }}
-        className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
-      >
-        <span className='hash-span' id='experience'>
-          &nbsp;
-        </span>
-        <motion.div variants={textVariant()}>
-          <p className={`${styles.sectionSubText} text-center`}>
-            What I have done so far
-          </p>
-          <h2 className={`${styles.sectionHeadText} text-center`}>
-            Work Experience.
-          </h2>
-        </motion.div>
-
-        <div className='mt-20 flex flex-col'>
-          <VerticalTimeline>
-            {experiences.map((experience, index) => (
-              <ExperienceCard
-                key={`experience-${index}`}
-                experience={experience}
-              />
-            ))}
-          </VerticalTimeline>
-        </div>
-      </motion.section>
-    </>
-  )
-}
-
-export default Experience

@@ -10,11 +10,11 @@ import LayOut from '../LayOut'
 
 const About = () => {
   return (
-    <main className='flex w-full flex-col items-center justify-center'>
+    <main className='flex flex-col items-center justify-between w-full md:flex-row'>
       <LayOut>
-        <div className='pt-16'>
+        <div className='pt-16 '>
           <AnimatedText text='Code Is Magic' className='mb-16' />
-          <div className='grid w-full grid-cols-8 gap-16'>
+          <div className='flex flex-col items-center justify-between w-full md:flex-row'>
             <div className='col-span-3 flex flex-col items-start justify-start '>
               <h2 className='mb-4 text-lg font-bold uppercase text-black/75'>
                 Biography
@@ -38,29 +38,30 @@ const About = () => {
                 src={oussama}
                 alt='oussama'
                 priority
+                
                 className='w-full h-auto rounded-2xl bg-black'
               />
             </div>
-            <div className='col-span-2 flex flex-col items-end justify-between'>
+            {/* <div className='col-span-2 flex flex-col items-end justify-between'>
               <div className='flex flex-col items-end justify-center'>
                 <span className='inline-block text-7xl font-bold'>
                   <AnimatedNum value={7} />+
                 </span>
-                <h2 className='text-xl font-medium capitalize text-black/75'>
+                <h2 className='text-xl font-medium capitalize text-black/75 dark:text-white/75'>
                   Satisfied Clients
                 </h2>
               </div>
 
               <div className='flex flex-col items-end justify-center'>
-                <span className='inline-block text-7xl font-bold'>
+                <span className='inline-block text-7xl font-bold dark:text-white'>
                   <AnimatedNum value={34} />+
                 </span>
-                <h2 className='text-xl font-medium capitalize text-black/75'>
+                <h2 className='text-xl font-medium capitalize text-black/75 dark:text-white'>
                   Projects Completed
                 </h2>
               </div>
 
-              <div className='flex flex-col items-end justify-center'>
+              <div className='flex flex-col items-end justify-center '>
                 <span className='inline-block text-7xl font-bold'>
                   <AnimatedNum value={4} />+
                 </span>
@@ -68,9 +69,8 @@ const About = () => {
                   Years Of Experience
                 </h2>
               </div>
-            </div>
+            </div> */}
           </div>
-          <Skills />
         </div>
       </LayOut>
     </main>

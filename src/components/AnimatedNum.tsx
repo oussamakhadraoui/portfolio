@@ -23,7 +23,7 @@ const AnimatedNum = ({ value }: AnimatedNumProps) => {
       }
     })
   }, [SpringValue, value])
-  return <span ref={ref}></span>
+  return <span ref={ref} className='dark:text-white'></span>
 }
 
 export default AnimatedNum

@@ -9,6 +9,9 @@ import Galaxy from '@/components/Galaxy'
 import Education from '@/components/Education'
 import LayOut from '@/components/LayOut'
 import Projects from '@/components/Projects'
+import Experience from '@/components/experience'
+import Image from 'next/image'
+import oussama from '../../public/eliot.jpg'
 export const metadata: Metadata = {
   title: 'OK | Portfolio',
   description: 'Glad to show you my work',
@@ -17,16 +20,16 @@ function Home() {
   return (
     <>
       <Galaxy />
-      <main className='flex items-center text-black w-full min-h-screen pt-0 dark:bg-black'>
+      <main className='flex items-center text-black w-full min-h-screen pt-40 max-md:w-full max-md:justify-center max-md:items-center max-md:block'>
         <LayOut className='pt-0'>
-          <div className='flex items-center justify-between w-full'>
-            <div className='w-1/2'>
-              {/* <Image src={image} className='w-full h-auto' alt='oussama' /> */}
+          <div className='flex flex-col items-center justify-between w-full md:flex-row'>
+            <div className='w-1/2 max-md:w-full'>
+              {/* <Image src={oussama} className='w-full h-auto' alt='oussama' /> */}
             </div>
-            <div className='w-1/2 flex flex-col items-center self-center'>
+            <div className='w-1/2 flex flex-col items-center self-center max-md:w-full'>
               <AnimatedText
                 text='Turning Vision to Reality With Coding'
-                className='!text-6xl !text-left'
+                className='dark:text-white'
               />
               <p className='my-4 text-base font-medium'>
                 As a skilled full stack developer ,I am dedicated to turn ideas
@@ -36,7 +39,7 @@ function Home() {
               <div className='flex items-center self-start mt-2'>
                 <Link href={'../../public/CV.pdf'} target='_blank'>
                   <Button
-                    className='bg-black text-white text-xl font-semibold p-2.5 px-8 hover:text-black rounded-xl py-6 '
+                    className='bg-black text-white text-xl font-semibold p-2.5 px-8 hover:text-black rounded-xl py-6 dark:text-black dark:bg-white hover:dark:bg-black hover:dark:text-white '
                     variant={'outline'}
                   >
                     Resume
@@ -45,7 +48,7 @@ function Home() {
                 </Link>
                 <Link href='mailto::ousamatest@gmail.com'>
                   <Button
-                    className='text-xl px-10 py-6 rounded-xl'
+                    className='text-xl px-10 py-6 rounded-xl dark:text-white'
                     variant={'link'}
                   >
                     Contact
@@ -54,11 +57,12 @@ function Home() {
               </div>
             </div>
           </div>
-          <About />
-          <Education />
+          {/* ///////////////////////////////////// */}
+            <About />
+            <Education />
           <div className='flex flex-col items-center px-4'>
-          <Projects />
-
+            <Projects />
+            <Experience />
           </div>
         </LayOut>
       </main>

@@ -12,15 +12,15 @@ module.exports = {
       center: true,
       padding: '2rem',
       screens: {
-        sm: '576px',
+        xs:{max:"479px"},
+        sm: {max:'576px'},
         // => @media (min-width: 576px) { ... }
 
-        md: '960px',
+        md: {max:'960px'},
         // => @media (min-width: 960px) { ... }
-
-        lg: '1440px',
+        lg: {max:'1440px'},
         // => @media (min-width: 1440px) { ... }
-        xl:"2000px"
+        xl:{max:"2000px"}
       },
     },
     extend: {

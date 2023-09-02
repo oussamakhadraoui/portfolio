@@ -42,16 +42,16 @@ const Skills = () => {
               className='flex justify-center items-center flex-col text-center m-4 transition-all ease-in-out xl:my-4 xl:mx-8'
               key={skill.name}
             >
-              <div
-                className={`flex justify-center items-center w-24 h-24 hover:shadow-xx bg-red-100 rounded-full ${skill.bgColor}`}
-                // style={{ backgroundColor: skill.bgColor }}
+              <motion.div
+                className={`flex justify-center items-center w-24 h-24 hover:shadow-xx  rounded-full ${skill.bgColor}`}
+                style={{ backgroundColor: skill.bgColor }}
               >
                 <Image
                   className='w-6/12 h-[50%]'
                   src={skill.icon}
                   alt={skill.name}
                 />
-              </div>
+              </motion.div>
               <p className='font-medium mt-2 xl:mt-4 text-xs text-left leading-normal text-gray-600 xl:text-2xl'>
                 {skill.name}
               </p>
