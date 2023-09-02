@@ -8,6 +8,7 @@ import next from '../../public/nextjs.png'
 import typescript from '../../public/ts.png'
 import node from '../../public/nodeJsSmall.png'
 import Image from 'next/image'
+import SectionHeading from './Heading-section'
 
 
 
@@ -25,11 +26,8 @@ const Skills = () => {
 
   return (
     <>
-      <div className='mt-7 border-2 border-solid border-black' />
-      <h2 className='font-extrabold text-center capitalize text-4xl text-black'>
-        Skills & Experiences
-      </h2>
-
+      {/* <div className='border-2 border-solid border-black' /> */}
+      <SectionHeading>Most used frameworks</SectionHeading>
       <div className='w-full mt-12 flex flex-row md:w-full sm:flex-col'>
         <motion.div
           className='flex flex-wrap justify-center items-center md:justify-center
@@ -44,7 +42,6 @@ const Skills = () => {
             >
               <motion.div
                 className={`flex justify-center items-center w-24 h-24 hover:shadow-xx  rounded-full ${skill.bgColor}`}
-                style={{ backgroundColor: skill.bgColor }}
               >
                 <Image
                   className='w-6/12 h-[50%]'
@@ -52,7 +49,7 @@ const Skills = () => {
                   alt={skill.name}
                 />
               </motion.div>
-              <p className='font-medium mt-2 xl:mt-4 text-xs text-left leading-normal text-gray-600 xl:text-2xl'>
+              <p className='font-medium mt-2 xl:mt-4 text-xs text-left leading-normal text-gray-600 xl:text-2xl dark:text-white'>
                 {skill.name}
               </p>
             </motion.div>

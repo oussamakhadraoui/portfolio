@@ -10,8 +10,8 @@ import Education from '@/components/Education'
 import LayOut from '@/components/LayOut'
 import Projects from '@/components/Projects'
 import Experience from '@/components/experience'
-import Image from 'next/image'
-import oussama from '../../public/eliot.jpg'
+import Contact from '@/components/Contact'
+import Skills from '@/components/Skills'
 export const metadata: Metadata = {
   title: 'OK | Portfolio',
   description: 'Glad to show you my work',
@@ -61,8 +61,10 @@ function Home() {
             <About />
             <Education />
           <div className='flex flex-col items-center px-4'>
+            <Skills/>
             <Projects />
             <Experience />
+          <Contact/>
           </div>
         </LayOut>
       </main>

@@ -31,10 +31,10 @@ export default function RootLayout({
           <ActiveSectionContextProvider>
             <NavBar />
             {children}
-            <Footer />
             <ThemeSwitch />
           </ActiveSectionContextProvider>
         </ThemeContextProvider>
+            <Footer />
       </body>
     </html>
   )
