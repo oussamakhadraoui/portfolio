@@ -4,18 +4,27 @@ import Experience from '../experience'
 import AnimatedNum from '../AnimatedNum'
 import Image from 'next/image'
 import AnimatedText from '../AnimatedText'
-import oussama from '../../../public/ok.png'
+import ok from '../../../public/ok.png'
 import LayOut from '../LayOut'
-
 
 const About = () => {
   return (
-    <main className='flex flex-col items-center justify-between w-full md:flex-row'>
-      <LayOut>
-        <div className='pt-16 '>
+    <main className='flex flex-col items-center justify-between w-full'>
+      <LayOut className='w-full'>
+        <div className='pt-16'>
           <AnimatedText text='Code Is Magic' className='mb-16' />
-          <div className='flex flex-col items-center justify-between w-full md:flex-row'>
-            <div className='col-span-3 flex flex-col items-start justify-start '>
+     
+          <div className='flex flex-col items-center justify-between w-full 2xl:flex-row'>
+            <div className='mb-8 lg:mr-8 md:mr-8 xl:w-1/2 right-0 relative h-max rounded-2xl border-2 border-solid border-black bg-white p-8'>
+              <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-2xl bg-cyan-300' />
+              <Image
+                src={ok}
+                alt='oussama'
+                priority
+                className='w-full h-auto rounded-2xl bg-black'
+              />
+            </div>
+            <div className='flex flex-col items-start justify-start'>
               <h2 className='mb-4 text-lg font-bold uppercase text-black/75'>
                 Biography
               </h2>
@@ -32,44 +41,6 @@ const About = () => {
                 teams of developers to maximize profits.
               </p>
             </div>
-            <div className='col-span-3 relative h-max rounded-2xl border-2 border-solid border-black bg-white p-8'>
-              <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-2xl bg-cyan-300' />
-              <Image
-                src={oussama}
-                alt='oussama'
-                priority
-                
-                className='w-full h-auto rounded-2xl bg-black'
-              />
-            </div>
-            {/* <div className='col-span-2 flex flex-col items-end justify-between'>
-              <div className='flex flex-col items-end justify-center'>
-                <span className='inline-block text-7xl font-bold'>
-                  <AnimatedNum value={7} />+
-                </span>
-                <h2 className='text-xl font-medium capitalize text-black/75 dark:text-white/75'>
-                  Satisfied Clients
-                </h2>
-              </div>
-
-              <div className='flex flex-col items-end justify-center'>
-                <span className='inline-block text-7xl font-bold dark:text-white'>
-                  <AnimatedNum value={34} />+
-                </span>
-                <h2 className='text-xl font-medium capitalize text-black/75 dark:text-white'>
-                  Projects Completed
-                </h2>
-              </div>
-
-              <div className='flex flex-col items-end justify-center '>
-                <span className='inline-block text-7xl font-bold'>
-                  <AnimatedNum value={4} />+
-                </span>
-                <h2 className='text-xl font-medium capitalize text-black/75'>
-                  Years Of Experience
-                </h2>
-              </div>
-            </div> */}
           </div>
         </div>
       </LayOut>
