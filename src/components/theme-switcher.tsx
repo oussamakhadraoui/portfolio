@@ -1,6 +1,5 @@
 'use client'
 
-
 import { useTheme } from '@/hooks/useThemeSwitcher'
 import React from 'react'
 import { BsMoon, BsSun } from 'react-icons/bs'

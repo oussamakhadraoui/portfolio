@@ -1,10 +1,6 @@
 'use client'
 import { motion } from 'framer-motion'
 import React from 'react'
-import Logo from './Logo'
-import NavLinks from './NavLinks'
-import { DarkIcon, GithubIcon, Linkedin, SunIcon } from './Icons'
-import useThemeSwitcher from '@/hooks/useThemeSwitcher'
 import { useActiveSectionContext } from '@/lib/active-section-context'
 import Link from 'next/link'
 import clsx from 'clsx'
@@ -14,36 +10,6 @@ const NavBar = () => {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext()
   return (
-    // <header className='w-full px-32 py-8 font-medium flex items-center justify-between'>
-    //   <nav>
-    //     <NavLinks href='/' title='Home' className='mr-4' />
-    //     <NavLinks href='/about' title='About' className='mx-4' />
-    //     <NavLinks href='/project' title='Project' className='mx-4' />
-    //     <NavLinks href='/contact' title='Contact' className='ml-4' />
-    //   </nav>
-
-    //   <nav className='flex items-center justify-center flex-wrap'>
-    //     <motion.a
-    //       target={'_blank'}
-    //       href='https://github.com/oussamakhadraoui'
-    //       whileHover={{ y: -2 }}
-    //       whileTap={{ scale: 0.9 }}
-    //     >
-    //       <GithubIcon className='w-6 mr-3' />
-    //     </motion.a>
-    //     <motion.a
-    //       target={'_blank'}
-    //       href='https://www.linkedin.com/in/oussama-khadraoui'
-    //       whileHover={{ y: -2 }}
-    //       whileTap={{ scale: 0.9 }}
-    //     >
-    //       <Linkedin className='w-6 ml-3' />
-    //     </motion.a>
-    //   </nav>
-    //   <div className='absolute left-[50%] top-2 translate-x-[-50%]'>
-    //     <Logo />
-    //   </div>
-    // </header>
     <header className='z-[999] relative'>
       <motion.div
         className='fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] sm:w-[36rem] sm:rounded-full dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75'
@@ -75,7 +41,6 @@ const NavBar = () => {
                 }}
               >
                 {link.name}
-
                 {link.name === activeSection && (
                   <motion.span
                     className='bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-800'

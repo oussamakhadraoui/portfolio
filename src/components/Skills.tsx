@@ -26,7 +26,6 @@ const Skills = () => {
 
   return (
     <>
-      {/* <div className='border-2 border-solid border-black' /> */}
       <SectionHeading>Most used frameworks</SectionHeading>
       <div className='w-full mt-12 flex flex-row md:w-full sm:flex-col'>
         <motion.div
