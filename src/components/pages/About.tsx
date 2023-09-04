@@ -9,11 +9,14 @@ import LayOut from '../LayOut'
 
 const About = () => {
   return (
-    <main className='flex flex-col items-center justify-between w-full'>
+    <main
+      id='about'
+      className=' flex flex-col items-center justify-between w-full'
+    >
       <LayOut className='w-full'>
         <div className='pt-16'>
           <AnimatedText text='Code Is Magic' className='mb-16' />
-     
+
           <div className='flex flex-col items-center justify-between w-full 2xl:flex-row'>
             <div className='mb-8 lg:mr-8 md:mr-8 xl:w-1/2 right-0 relative h-max rounded-2xl border-2 border-solid border-black bg-white p-8'>
               <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-2xl bg-cyan-300' />

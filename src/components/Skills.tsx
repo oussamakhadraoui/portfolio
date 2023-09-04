@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { Fragment } from 'react'
 import { motion } from 'framer-motion'
 import express from '../../public/express.png'
 import nest from '../../public/nest.png'
@@ -25,7 +25,7 @@ const Skills = () => {
 
 
   return (
-    <>
+    <main id='skills' className='scroll-mt-28'>
       <SectionHeading>Most used frameworks</SectionHeading>
       <div className='w-full mt-12 flex flex-row md:w-full sm:flex-col'>
         <motion.div
@@ -55,7 +55,7 @@ const Skills = () => {
           ))}
         </motion.div>
       </div>
-    </>
+    </main>
   )
 }
 

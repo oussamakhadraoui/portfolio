@@ -19,7 +19,7 @@ const Details = ({address,company,companyLink,position,time,work}: DetailsProps)
   return (
     <li
       ref={ref}
-      className='my-8 ml-4 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between'
+      className='w-full my-8 ml-4 first:mt-0 last:mb-0 mx-auto flex flex-col items-start lg:ml-28 justify-center'
     >
       <figure className='absolute left-0 stroke-black/60'>
         <svg
@@ -54,20 +54,13 @@ const Details = ({address,company,companyLink,position,time,work}: DetailsProps)
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5, type: 'spring' }}
       >
-        <h3 className='capitalize font-bold text-2xl'>
+        <h3 className='capitalize font-bold flex flex-end text-2xl'>
           {position}&nbsp;
-          <a
-            target='_blank'
-            className='text-primary capitalize'
-            href={companyLink}
-          >
-            @{company}
-          </a>
         </h3>
         <span className='capitalize font-medium text-black/75'>
           {time} | {address}
         </span>
-        <p className='font-medium w-full'>{work}</p>
+        <p className='font-medium w-full'>{company}</p>
       </motion.div>
     </li>
   )

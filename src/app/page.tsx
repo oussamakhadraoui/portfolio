@@ -23,7 +23,10 @@ function Home() {
       <Galaxy />
       <main className='flex items-center text-black w-full min-h-screen pt-10 max-md:w-full max-md:justify-center max-md:items-center max-md:block'>
         <LayOut className='pt-0'>
-          <div className='flex flex-col items-center justify-between w-full lg:flex-row'>
+          <div
+            id='home'
+            className='flex scroll-mt-28 flex-col items-center justify-between w-full lg:flex-row'
+          >
             <div className='lg:w-1/2 w-full flex justify-center items-center '>
               <div className='flex items-center w-[70%] justify-between mb-7 flex-col md:flex-row'>
                 <div className='flex flex-col items-center justify-center'>
@@ -85,9 +88,7 @@ function Home() {
               </div>
             </div>
           </div>
-          {/* ///////////////////////////////////// */}
           <About />
-          <Education />
           <div className='flex flex-col items-center px-4'>
             <Skills />
             <Projects />
