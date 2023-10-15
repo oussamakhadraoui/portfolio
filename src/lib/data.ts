@@ -1,7 +1,9 @@
 import React from 'react'
 import discord from '../../public/discord.png'
 import realchat from '../../public/realchat.png'
-import wordanalyticsImg from '../../public/wordanalytics.png'
+import nestjs from '../../public/nestjs.png'
+import natours from '../../public/natours.png'
+import pdf from '../../public/pdf.png'
 import { CgWorkAlt } from 'react-icons/cg'
 import { FaReact } from 'react-icons/fa'
 import { LuGraduationCap } from 'react-icons/lu'
@@ -17,13 +19,13 @@ export const projectsData = [
   },
 
   {
-    title: 'Word Analytics',
+    title: 'Ai Pdf chatbot',
     description:
-      'A public web app for quick analytics on text. It shows word count, character count and social media post limits.',
-    tags: ['React', 'Next.js', 'SQL', 'Tailwind', 'Framer'],
-    imageUrl: wordanalyticsImg,
-    // gitUrl,
-    // previewUrl,
+      'A public web app for quick analytics on pdf. I build a Modern SaaS Platform from beginning to end.',
+    tags: ['React', 'Next.js', 'Trpc', 'Tailwind', 'Prisma'],
+    imageUrl: pdf,
+    gitUrl: 'https://github.com/oussamakhadraoui/pdf_project',
+    previewUrl: 'https://hi-pdf.vercel.app/',
   },
   {
     title: 'Real Time Chat',
@@ -33,6 +35,24 @@ export const projectsData = [
     imageUrl: realchat,
     gitUrl: 'https://github.com/oussamakhadraoui/realtime-chat-app',
     previewUrl: 'https://realtime-chat-app-teal.vercel.app/',
+  },
+  {
+    title: 'Nestjs Protected Authentication',
+    description:
+      'I build a Modern implementation of access token and the Refresh Token, RBAC and protected routes.',
+    tags: ['Nest.js', 'JsonWebToken', 'Passport', 'Postgres', 'Prisma'],
+    imageUrl: nestjs,
+    gitUrl: 'https://github.com/oussamakhadraoui/backend-nestjs',
+    previewUrl: 'https://github.com/oussamakhadraoui/backend-nestjs',
+  },
+  {
+    title: 'Natours Project',
+    description:
+      "I try to do the Jonas's project with the latest version of every package.",
+    tags: ['Javascript', 'express.js', 'Node.js', 'Pug', 'MongoDb'],
+    imageUrl: natours,
+    gitUrl: 'https://github.com/oussamakhadraoui/natours',
+    previewUrl: 'https://github.com/oussamakhadraoui/natours',
   },
 ] as const
 export const links = [
