@@ -1,31 +1,38 @@
 import React from 'react'
-import corpcommentImg from '../../public/corpcomment.png'
-import rmtdevImg from '../../public/rmtdev.png'
+import discord from '../../public/discord.png'
+import realchat from '../../public/realchat.png'
 import wordanalyticsImg from '../../public/wordanalytics.png'
 import { CgWorkAlt } from 'react-icons/cg'
 import { FaReact } from 'react-icons/fa'
 import { LuGraduationCap } from 'react-icons/lu'
 export const projectsData = [
   {
-    title: 'CorpComment',
+    title: 'Discord Clone',
     description:
-      'I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.',
-    tags: ['React', 'Next.js', 'MongoDB', 'Tailwind', 'Prisma'],
-    imageUrl: corpcommentImg,
+      'I create an end-to-end fullstack and real-time discord clone, all with servers, channels, video calls, audio calls, editing and deleting messages as well as member roles.',
+    tags: ['Typescript', 'Next.js', 'Postgres', 'Socket.io', 'React'],
+    imageUrl: discord,
+    gitUrl: 'https://github.com/oussamakhadraoui/discord-clone',
+    previewUrl: 'https://discord-clone-production-b08c.up.railway.app/',
   },
-  {
-    title: 'rmtDev',
-    description:
-      'Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.',
-    tags: ['React', 'TypeScript', 'Next.js', 'Tailwind', 'Redux'],
-    imageUrl: rmtdevImg,
-  },
+
   {
     title: 'Word Analytics',
     description:
       'A public web app for quick analytics on text. It shows word count, character count and social media post limits.',
     tags: ['React', 'Next.js', 'SQL', 'Tailwind', 'Framer'],
     imageUrl: wordanalyticsImg,
+    // gitUrl,
+    // previewUrl,
+  },
+  {
+    title: 'Real Time Chat',
+    description:
+      'I build a super-performant realtime chat app deployed to the web, ready to be used by actual users.',
+    tags: ['React', 'Pusher', 'Next.js', 'Tailwind', 'Redis'],
+    imageUrl: realchat,
+    gitUrl: 'https://github.com/oussamakhadraoui/realtime-chat-app',
+    previewUrl: 'https://realtime-chat-app-teal.vercel.app/',
   },
 ] as const
 export const links = [
