@@ -17,9 +17,9 @@ const About = () => {
         <div className='pt-16'>
           <AnimatedText text='Code Is Magic' className='mb-16' />
 
-          <div className='flex flex-col items-center justify-between w-full 2xl:flex-row'>
-            <div className='mb-8 lg:mr-8 md:mr-8 xl:w-1/2 right-0 relative h-max rounded-2xl border-2 border-solid border-black bg-white p-8'>
-              <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-2xl bg-cyan-300' />
+          <div className='flex flex-col items-center justify-between w-full 2xl:flex-row dark:text-blue-300 text-lg'>
+            <div className='mb-8 lg:mr-8 md:mr-8 xl:w-1/2 right-0 relative h-max rounded-2xl border-2 border-solid border-black bg-white dark:bg-gray-700 p-8'>
+              <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-2xl bg-cyan-300 dark:bg-gray-500' />
               <Image
                 src={ok}
                 alt='oussama'
@@ -28,7 +28,7 @@ const About = () => {
               />
             </div>
             <div className='flex flex-col items-start justify-start'>
-              <h2 className='mb-4 text-lg font-bold uppercase text-black/75'>
+              <h2 className='mb-4 text-2xl font-bold uppercase text-black/75 dark:text-blue-200'>
                 Biography
               </h2>
               <p className='font-medium'>
@@ -37,7 +37,7 @@ const About = () => {
               </p>
               <br />
               <p className='my-4 font-medium'>
-                Dedicated Web Developer with 4 years of comprehensive experience
+                Dedicated Web Developer with 2 years of comprehensive experience
                 collaborating with colleagues to achieve sleek and streamlined
                 experiences. Expertise in data marketing analysis and revising
                 websites to improve function. Successful at managing strong
