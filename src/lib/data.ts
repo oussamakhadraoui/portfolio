@@ -1,42 +1,47 @@
 import React from 'react'
-import discord from '../../public/discord.png'
+
 import realchat from '../../public/realchat.png'
+import cait from '../../public/cait.png'
+import auth5 from '../../public/auth5.png'
 import nestjs from '../../public/nestjs.png'
 import natours from '../../public/natours.png'
-import pdf from '../../public/pdf.png'
+
 import { CgWorkAlt } from 'react-icons/cg'
 import { FaReact } from 'react-icons/fa'
 import { LuGraduationCap } from 'react-icons/lu'
 export const projectsData = [
   {
-    title: 'Discord Clone',
-    description:
-      'I create an end-to-end fullstack and real-time discord clone, all with servers, channels, video calls, audio calls, editing and deleting messages as well as member roles.',
-    tags: ['Typescript', 'Next.js', 'Postgres', 'Socket.io', 'React'],
-    imageUrl: discord,
-    gitUrl: 'https://github.com/oussamakhadraoui/discord-clone',
-    previewUrl: 'https://discord-clone-production-b08c.up.railway.app/',
-  },
-
-  {
-    title: 'Ai Pdf chatbot',
-    description:
-      'A public web app for quick analytics on pdf. I build a Modern SaaS Platform from beginning to end.',
-    tags: ['React', 'Next.js', 'Trpc', 'Tailwind', 'Prisma'],
-    imageUrl: pdf,
-    gitUrl: 'https://github.com/oussamakhadraoui/pdf_project',
-    previewUrl: 'https://hi-pdf.vercel.app/',
-  },
-  {
+    show: true,
     title: 'Real Time Chat',
     description:
       'I build a super-performant realtime chat app deployed to the web, ready to be used by actual users.',
     tags: ['React', 'Pusher', 'Next.js', 'Tailwind', 'Redis'],
     imageUrl: realchat,
     gitUrl: 'https://github.com/oussamakhadraoui/realtime-chat-app',
-    previewUrl: 'https://realtime-chat-app-teal.vercel.app/',
+    previewUrl: 'https://realtime-chat-app-bay-eta.vercel.app/',
   },
   {
+    show: true,
+    title: 'Cait',
+    description:
+      'Cait is an app to make notes and track them using open ai and pinecone.',
+    tags: ['React', 'pinecone', 'Next.js', 'Tailwind', 'OpenAi'],
+    imageUrl: cait,
+    gitUrl: 'https://github.com/oussamakhadraoui/ai-chat',
+    previewUrl: 'https://ai-cat-tau.vercel.app/note',
+  },
+  {
+    show: true,
+    title: 'Next Auth',
+    description:
+      'Next auth is a login platform use next auth 5 with two factor authentication.',
+    tags: ['nextAuth', 'Prisma', 'Next.js', 'Tailwind', 'Postgres'],
+    imageUrl: auth5,
+    gitUrl: 'https://github.com/oussamakhadraoui/auth2',
+    previewUrl: 'https://nextauthv5-mu.vercel.app/',
+  },
+  {
+    show: false,
     title: 'Nestjs Protected Authentication',
     description:
       'I build a Modern implementation of access token and the Refresh Token, RBAC and protected routes.',
@@ -46,6 +51,7 @@ export const projectsData = [
     previewUrl: 'https://github.com/oussamakhadraoui/backend-nestjs',
   },
   {
+    show: false,
     title: 'Natours Project',
     description:
       "I try to do the Jonas's project with the latest version of every package.",
@@ -84,27 +90,27 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: 'Graduated bootcamp',
+    title: 'Summer Internship',
     location: 'Tunis, TN',
     description:
-      'I graduated after 6 months of studying. I immediately found a job as a front-end developer.',
+      'I worked as a summer intern in a remote company for 3 months. I learned a lot about new technology.',
     icon: React.createElement(LuGraduationCap),
-    date: '2019',
+    date: '2021 - 2022',
   },
   {
     title: 'Front-End Developer',
     location: 'Tunis, TN',
     description:
-      'I worked as a remote front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.',
+      'I worked as a remote front-end developer for 6 months in a startup. I also upskilled to the full stack.',
     icon: React.createElement(CgWorkAlt),
-    date: '2019 - 2021',
+    date: '2022 - 2023',
   },
   {
     title: 'Full-Stack Developer',
-    location: 'Ohio, US',
+    location: 'Navy, TN',
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Nest.js, Next.js, TypeScript, Tailwind, Prisma, MongoDB and Postgresql. I'm open to full-time opportunities.",
+      "I'm now a full-stack developer in the tunisian navy. My stack includes React, Nest.js, Next.js, TypeScript, Tailwind, Prisma, MongoDB and Postgresql. I'm open to new opportunities.",
     icon: React.createElement(FaReact),
-    date: '2021 - present',
+    date: '2023 - present',
   },
 ] as const
