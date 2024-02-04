@@ -15,7 +15,7 @@ export const projectsData = [
     description:
       'I build a super-performant realtime chat app deployed to the web, ready to be used by actual users.',
     tags: ['React', 'Pusher', 'Next.js', 'Tailwind', 'Redis'],
-    imageUrl: realchat,
+    imageUrl: '/realchat.png',
     gitUrl: 'https://github.com/oussamakhadraoui/realtime-chat-app',
     previewUrl: 'https://realtime-chat-app-bay-eta.vercel.app/',
   },
@@ -25,7 +25,7 @@ export const projectsData = [
     description:
       'Cait is an app to make notes and track them using open ai and pinecone.',
     tags: ['React', 'pinecone', 'Next.js', 'Tailwind', 'OpenAi'],
-    imageUrl: cait,
+    imageUrl: '/cait.png',
     gitUrl: 'https://github.com/oussamakhadraoui/ai-chat',
     previewUrl: 'https://ai-cat-tau.vercel.app/note',
   },
@@ -35,7 +35,7 @@ export const projectsData = [
     description:
       'Next auth is a login platform use next auth 5 with two factor authentication.',
     tags: ['nextAuth', 'Prisma', 'Next.js', 'Tailwind', 'Postgres'],
-    imageUrl: auth5,
+    imageUrl: '/auth5.png',
     gitUrl: 'https://github.com/oussamakhadraoui/auth2',
     previewUrl: 'https://nextauthv5-mu.vercel.app/',
   },
@@ -45,7 +45,7 @@ export const projectsData = [
     description:
       'I build a Modern implementation of access token and the Refresh Token, RBAC and protected routes.',
     tags: ['Nest.js', 'JsonWebToken', 'Passport', 'Postgres', 'Prisma'],
-    imageUrl: nestjs,
+    imageUrl: '/nestjs.png',
     gitUrl: 'https://github.com/oussamakhadraoui/backend-nestjs',
     previewUrl: 'https://github.com/oussamakhadraoui/backend-nestjs',
   },
@@ -55,7 +55,7 @@ export const projectsData = [
     description:
       "I try to do the Jonas's project with the latest version of every package.",
     tags: ['Javascript', 'express.js', 'Node.js', 'Pug', 'MongoDb'],
-    imageUrl: natours,
+    imageUrl: '/natours.png',
     gitUrl: 'https://github.com/oussamakhadraoui/natours',
     previewUrl: 'https://github.com/oussamakhadraoui/natours',
   },
