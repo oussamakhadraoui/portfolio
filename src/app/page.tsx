@@ -31,7 +31,7 @@ function Home() {
               <div className='flex items-center w-[70%] justify-between mb-7 flex-col md:flex-row'>
                 <div className='flex flex-col items-center justify-center'>
                   <span className='inline-block text-5xl lg:text-6xl text-gray-600 font-bold dark:text-white'>
-                    <AnimatedNum value={7} />+
+                    <AnimatedNum value={1} />+
                   </span>
                   <h2 className='text-xl text-center font-medium capitalize text-cyan-800/70 dark:text-white'>
                     Satisfied Clients
@@ -40,7 +40,7 @@ function Home() {
 
                 <div className='flex flex-col items-center justify-center'>
                   <span className='inline-block text-5xl lg:text-6xl text-gray-600 font-bold dark:text-white'>
-                    <AnimatedNum value={34} />+
+                    <AnimatedNum value={7} />+
                   </span>
                   <h2 className='text-xl text-center font-medium capitalize text-cyan-800/80 dark:text-white'>
                     Projects Completed
@@ -49,7 +49,7 @@ function Home() {
 
                 <div className='flex flex-col items-center justify-center '>
                   <span className='inline-block text-5xl 2xl:text-6xl text-gray-600 font-bold dark:text-white'>
-                    <AnimatedNum value={4} />+
+                    <AnimatedNum value={2} />+
                   </span>
                   <h2 className='text-xl text-center font-medium capitalize text-cyan-800 dark:text-white'>
                     Years Of Experience
@@ -62,7 +62,7 @@ function Home() {
                 text='Turning Vision to Reality With Coding'
                 className='dark:text-white'
               />
-              <p className='my-4 text-base font-medium text-center lg:text-left'>
+              <p className='my-4 text-lg font-medium text-center lg:text-left dark:text-amber-600'>
                 As a skilled full stack developer ,I am dedicated to turn ideas
                 into innovative web application. Go check my projects and
                 articles.
