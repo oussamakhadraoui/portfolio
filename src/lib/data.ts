@@ -1,10 +1,9 @@
 import React from 'react'
-
-import realchat from '../../public/realchat.png'
-import cait from '../../public/cait.png'
-import auth5 from '../../public/auth5.png'
-import nestjs from '../../public/nestjs.png'
-import natours from '../../public/natours.png'
+import realchat from '/public/realchat.png'
+import cait from '/public/cait.png'
+import auth5 from '/public/auth5.png'
+import nestjs from '/public/nestjs.png'
+import natours from '/public/natours.png'
 
 import { CgWorkAlt } from 'react-icons/cg'
 import { FaReact } from 'react-icons/fa'
