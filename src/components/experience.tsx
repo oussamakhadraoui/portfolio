@@ -9,7 +9,6 @@ import {
 import 'react-vertical-timeline-component/style.min.css'
 import { experiencesData } from '@/lib/data'
 
-
 import { useSectionInView } from '@/hooks/useSectionInView'
 import SectionHeading from './Heading-section'
 import { useTheme } from '@/hooks/useThemeSwitcher'
@@ -40,15 +39,21 @@ export default function Experience() {
                     : '0.4rem solid rgba(255, 255, 255, 0.5)',
               }}
               date={item.date}
+              dateClassName='text-gray-700 dark:text-white'
               icon={item.icon}
+              iconClassName='text-gray-700 dark:text-white'
               iconStyle={{
                 background:
                   theme === 'light' ? 'white' : 'rgba(255, 255, 255, 0.15)',
                 fontSize: '1.5rem',
               }}
             >
-              <h3 className='font-semibold capitalize'>{item.title}</h3>
-              <p className='font-normal !mt-0'>{item.location}</p>
+              <h3 className='font-semibold text-lg capitalize dark:text-white'>
+                {item.title}
+              </h3>
+              <p className='font-normal !mt-0 dark:text-white'>
+                {item.location}
+              </p>
               <p className='!mt-1 !font-normal text-gray-700 dark:text-white/75'>
                 {item.description}
               </p>
